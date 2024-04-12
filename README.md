@@ -23,3 +23,9 @@ Please refer to the [MMLGB Wiki](https://github.com/potatoTeto/mmlgb/wiki) for a
 ### Special Thanks
 - Simon Larsen, Original developer - [mmlgb v1.0](https://github.com/SimonLarsen/mmlgb)
 - jimmy-dsi, Programming assistance - [GitHub](https://github.com/jimmy-dsi)
+- 
+## License
+
+mmlgb Source Code - MIT
+
+All demo songs - All rights reserved
