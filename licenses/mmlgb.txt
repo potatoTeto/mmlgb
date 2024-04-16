@@ -1,4 +1,4 @@
-MIT License (Source code only; Music Examples are CC BY-NC (c) 2017 potatoTeto)
+MIT License
 
 Copyright (c) 2017 Simon Larsen
 
