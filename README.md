@@ -29,4 +29,4 @@ Please refer to the [MMLGB Wiki](https://github.com/potatoTeto/mmlgb/wiki) for a
 
 mmlgb Source Code - MIT
 
-All demo songs - CC BY-NC 4.0
+All demo songs & art - CC BY-NC 4.0
