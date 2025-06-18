@@ -1,6 +1,8 @@
 #ifndef MUS_FREQ_H
 #define MUS_FREQ_H
 
-extern const unsigned int freq[];
+#include <gbdk/platform.h>
+
+extern const UWORD freq[];
 
 #endif

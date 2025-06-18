@@ -1,7 +1,8 @@
-#include <gb/gb.h>
+#include <gbdk/platform.h>
+
 #include "music.h"
-#include "data/background.h"
-#include "data/sprites.h"
+#include "background.h"
+#include "sprites.h"
 
 extern UBYTE song_data;
 UBYTE joystate, oldjoystate;
@@ -12,7 +13,7 @@ UBYTE joystate, oldjoystate;
 
 UBYTE selection, paused;
 
-void togglePaused() {
+void togglePaused(void) {
 	paused = !paused;
 	mus_setPaused(paused);
 	if(paused) {
@@ -24,7 +25,7 @@ void togglePaused() {
 	}
 }
 
-void main() {
+void main(void) {
 	disable_interrupts();
 
 	DISPLAY_OFF;

@@ -1,5 +1,5 @@
 #/bin/sh
 
-java -jar parser/MMLGB.jar "$1" driver/song.asm
+java -jar parser/MMLGB.jar "$1" driver/song/song.asm
 
-lcc -Wl-j driver/player.asm driver/music.asm driver/song.asm driver/freq.asm driver/noisefreq.asm driver/vib.asm -o rom.gb
+$(GBDK_HOME)/bin/lcc -o rom.gb -Idriver driver/*.c driver/song/*.asm driver/player/*.c

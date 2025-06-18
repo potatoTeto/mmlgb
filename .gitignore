@@ -2,6 +2,9 @@
 *.gb
 *.gbc
 *.gba
+*.map
+*.noi
+*.sym
 
 # Distribution files
 dist/

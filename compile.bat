@@ -1,29 +1,26 @@
 @echo off
-java.exe -jar parser\MMLGB.jar music\%1 driver\song.asm
-if %errorlevel% neq 0 (
-	pause
-	exit /b %errorlevel%
+setlocal enabledelayedexpansion
+
+java -jar parser\MMLGB.jar music/%1 driver\song\song.asm
+
+rem Initialize source file list
+set SOURCES=
+set ASM_SOURCES=
+
+rem Collect all .c files in driver\
+for %%f in (driver\*.c) do (
+    set SOURCES=!SOURCES! %%f
 )
 
-lcc.exe driver\player.asm driver\music.asm driver\song.asm driver\freq.asm driver\noisefreq.asm driver\vib.asm -o rom.gb
-
-if %errorlevel% neq 0 (
-	echo Error compiling rom!
-	pause
-	exit /b %errorlevel%
+rem Collect all .c files in driver\player\
+for %%f in (driver\player\*.c) do (
+    set SOURCES=!SOURCES! %%f
 )
 
-@echo off
-setlocal EnableDelayedExpansion
-set "cmd=findstr /R /N "^^" driver\song.asm | find /C ":""
+rem Collect all .asm files in driver\song\
+for %%f in (driver\song\*.asm) do (
+    set ASM_SOURCES=!ASM_SOURCES! %%f
+)
 
-for /f %%a in ('!cmd!') do set INSERT_SIZE=%%a
-setlocal DisableDelayedExpansion
-set /a "INSERT_SIZE=%INSERT_SIZE%-2"
-
-echo %~nx0 compiled to rom.gb successfully!
-echo:
-echo Insert size: %INSERT_SIZE% bytes
-echo Launching rom...
-rom.gb
-pause
+rem Now compile
+lcc -Wl-j -Wm-yS -o rom.gb -Idriver !SOURCES! !ASM_SOURCES!
