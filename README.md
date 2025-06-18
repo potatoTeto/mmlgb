@@ -21,9 +21,9 @@ Please refer to the [MMLGB Wiki](https://github.com/potatoTeto/mmlgb/wiki) for a
 - The distributable file will be in the ``dist`` directory, as a timestamped .zip
 
 ### Special Thanks
-- @@SimonLarsen, Original developer - [mmlgb v1.0](https://github.com/SimonLarsen/mmlgb)
-- @@jimmy-dsi, Programming assistance - [GitHub](https://github.com/jimmy-dsi)
-- @@untoxa - Adapting the code for GBDK-2020 v4.x + Clean refactor
+- @SimonLarsen, Original developer - [mmlgb v1.0](https://github.com/SimonLarsen/mmlgb)
+- @jimmy-dsi, Programming assistance - [GitHub](https://github.com/jimmy-dsi)
+- @untoxa, Adapting the code for GBDK-2020 v4.x + Clean refactor - [GitHub](https://github.com/untoxa)
 
 ## License
 
