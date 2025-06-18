@@ -6,6 +6,17 @@
 *.noi
 *.sym
 
+# Other user files
+*.sn[a-z0-9]
+
+# Ignore all .mml files in /music/
+music/*.mml
+
+# EXCEPTIONS — explicitly keep certain files
+!music/ttg_mainmenu.mml
+!music/ttg_plains.mml
+!music/lcw_woods.mml
+
 # Distribution files
 dist/
 
