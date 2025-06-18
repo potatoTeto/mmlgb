@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-java -jar parser\MMLGB.jar music/%1 driver\song\song.asm
+parser\MMLGB.exe music/%1 driver\song\song.asm
 
 rem Initialize source file list
 set SOURCES=
