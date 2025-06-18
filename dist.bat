@@ -1,13 +1,14 @@
-#!/bin/sh
+@echo off
 echo -e "Compiling driver..."
 
 cd driver
 lcc -S freq.c
-lcc -S player.c
 lcc -S music.c
 lcc -S noisefreq.c
 lcc -S vib.c
-cd ..
+cd player
+lcc -S player.c
+cd ../..
 
 echo -e "\nCompiling parser..."
 cd parser

@@ -1,6 +1,6 @@
 #include <gbdk/platform.h>
 
-#include "music.h"
+#include "../music.h"
 #include "background.h"
 #include "sprites.h"
 
