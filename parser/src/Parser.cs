@@ -282,12 +282,24 @@
                     }
                     else
                     {
-                        song.AddData(active, (int)Song.CMD.T_REST | 0x80);
-                        song.AddData(active, rLength);
-                        for (int i = 0; i < rLength / 255; ++i)
+                        const int wholeNoteLength = BEAT_STEPS * 4;
+                        int loopCount = rLength / wholeNoteLength;
+                        int remainderLength = rLength % wholeNoteLength;
+
+                        if (loopCount > 0)
                         {
-                            song.AddData(active, (int)Song.CMD.T_WAIT | 0x80);
-                            song.AddData(active, 255);
+                            // Repeat block for full 192-tick rests
+                            song.AddData(active, (int)Song.CMD.T_REP_START);
+                            song.AddData(active, (int)Song.CMD.T_REST | 0x80);
+                            song.AddData(active, wholeNoteLength);
+                            song.AddData(active, (int)Song.CMD.T_REP_END);
+                            song.AddData(active, loopCount);
+                        }
+
+                        if (remainderLength > 0)
+                        {
+                            song.AddData(active, (int)Song.CMD.T_REST | 0x80);
+                            song.AddData(active, remainderLength);
                         }
                     }
                     break;

@@ -8,6 +8,7 @@
 
 # Other user files
 *.sn[a-z0-9]
+*.lnk
 
 # Ignore all .mml files in /music/
 music/*.mml
