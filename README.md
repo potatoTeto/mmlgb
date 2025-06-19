@@ -8,7 +8,13 @@ Please refer to the [MMLGB Wiki](https://github.com/potatoTeto/mmlgb/wiki) for a
 ## Dependencies
 - [GBDK](https://github.com/gbdk-2020/gbdk-2020)
   - ``gbdk/bin`` should also be added to PATH/Environment Variables.
-- [Java Development Kit](https://www.oracle.com/java/technologies/downloads/)
+
+- [.NET SDK (C#)](https://dotnet.microsoft.com/download)
+  - Required to build the cross-platform C# parser (`MMLGB.dll`).
+  - You must have the `dotnet` CLI available in your terminal (`dotnet --version` to check).
+
+- [Python 3.x](https://www.python.org/downloads/)  
+  - Only required if you use helper scripts or additional processing tools that depend on Python.
 
 # Usage
 - Create or place your .mml file directly in the ``music/`` directory.
