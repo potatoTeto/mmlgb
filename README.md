@@ -19,7 +19,7 @@ Please refer to the [MMLGB Wiki](https://github.com/potatoTeto/mmlgb/wiki) for a
 # Usage
 - Create or place your .mml file directly in the ``music/`` directory.
   - Feel free to check out the included examples for studying purposes!)
-- Execute ``compile[.bat/.sh] your_file.mml`` in Terminal/Command Prompt to compile ``rom.gb``. Feel free to amend a line within compile.bat to auto-launch ``rom.gb`` in your favorite emulator.
+- Execute ``compile[.bat/.sh] your_file.mml`` in Terminal/Command Prompt to compile ``rom.gb``. Feel free to amend ``start rom.gb`` at the bottom of the ``compile`` script to auto-launch ``rom.gb`` in your favorite emulator.
   - For accuracy reasons, I highly recommend the [bgb emulator](https://bgb.bircd.org/).
 
 # Build Distribution
