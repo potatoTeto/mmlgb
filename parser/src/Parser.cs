@@ -140,25 +140,35 @@
             Eat(Lexer.TokenType.RCURLY, "}");
             Eat(Lexer.TokenType.NEWLINE, "Line break");
 
+            // Backup parser state
             var tokensBak = tokens;
             var songBak = song;
             var positionBak = position;
+            var nextBak = next;
 
+            // Temporary song just for macro parsing
+            Song tempSong = new Song();
+            song = tempSong;
             tokens = macro;
             position = 0;
             in_macro = true;
             next = tokens[0];
 
+            // Parse macro commands into tempSong
             bool[] active = { true, false, false, false };
             ParseCommands(active);
-            List<int> macroData = song.GetChannel(0);
 
+            // Extract macro data from channel 0
+            List<int> macroData = new List<int>(tempSong.GetChannel(0));
+
+            // Restore previous parser state
             tokens = tokensBak;
             song = songBak;
             position = positionBak;
+            next = nextBak;
             in_macro = false;
-            next = tokens[position];
 
+            // Store macro data in the real song
             song.AddMacroData(id, macroData);
         }
 
