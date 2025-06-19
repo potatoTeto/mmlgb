@@ -286,7 +286,7 @@
                         int loopCount = rLength / wholeNoteLength;
                         int remainderLength = rLength % wholeNoteLength;
 
-                        if (loopCount > 0)
+                        if (loopCount > 2)
                         {
                             // Repeat block for full 192-tick rests
                             song.AddData(active, (int)Song.CMD.T_REP_START);
@@ -294,6 +294,12 @@
                             song.AddData(active, wholeNoteLength);
                             song.AddData(active, (int)Song.CMD.T_REP_END);
                             song.AddData(active, loopCount);
+                        } else
+                        {
+                            for (int i = loopCount; i > 0; i--) {
+                                song.AddData(active, (int)Song.CMD.T_REST | 0x80);
+                                song.AddData(active, wholeNoteLength);
+                            }
                         }
 
                         if (remainderLength > 0)
