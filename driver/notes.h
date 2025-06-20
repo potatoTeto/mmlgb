@@ -1,7 +1,7 @@
 #ifndef NOTES_H
 #define NOTES_H
 
-typedef enum {
+enum E_CMD {
 	T_LENGTH,
 	T_OCTAVE,
 	T_OCT_UP,
@@ -11,6 +11,7 @@ typedef enum {
 	T_WAVEDUTY,
 	T_PAN,
 	T_PORTAMENTO,
+	T_SLIDE,
 	T_VIBRATO,
 	T_VIBRATO_DELAY,
 	T_REP_START,
@@ -36,6 +37,6 @@ typedef enum {
 	T_B,
 	T_REST,
 	T_WAIT
-} E_CMD;
+};
 
 #endif

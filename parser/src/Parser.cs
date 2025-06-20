@@ -142,7 +142,6 @@
 
             // Backup parser state
             var tokensBak = tokens;
-            var songBak = song;
             var positionBak = position;
             var nextBak = next;
 
@@ -163,7 +162,7 @@
 
             // Restore previous parser state
             tokens = tokensBak;
-            song = songBak;
+            song = song_root;
             position = positionBak;
             next = nextBak;
             in_macro = false;

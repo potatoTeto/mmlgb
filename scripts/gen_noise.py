@@ -14,7 +14,7 @@ def bitmask(r, s):
 # Prepare C source content
 c_lines = []
 c_lines.append('#include "noisefreq.h"\n\n')
-c_lines.append("const UBYTE noise_freq[] = {\n")
+c_lines.append("const unsigned char noise_freq[] = {\n")
 
 # Main noise table (8 octaves)
 for r in range(7, -1, -1):
@@ -44,7 +44,7 @@ h_lines = [
     "#define MUS_NOISEFREQ_H\n\n",
     "#include <gbdk/platform.h>\n\n",
     "#define MUS_NOISE_FIRST_OCTAVE 1U\n\n",
-    "extern const UBYTE noise_freq[];\n\n",
+    "extern const unsigned char noise_freq[];\n\n",
     "#endif\n"
 ]
 
