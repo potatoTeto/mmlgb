@@ -1,6 +1,6 @@
 #include "noisefreq.h"
 
-const unsigned char noise_freq[] = {
+const UBYTE noise_freq[] = {
 	247U, 231U, 215U, 199U, 183U, 167U, 151U, 135U, 119U, 103U, 87U, 71U, 0U, 0U, 0U, 0U,
 	246U, 230U, 214U, 198U, 182U, 166U, 150U, 134U, 118U, 102U, 86U, 70U, 0U, 0U, 0U, 0U,
 	245U, 229U, 213U, 197U, 181U, 165U, 149U, 133U, 117U, 101U, 85U, 69U, 0U, 0U, 0U, 0U,

@@ -25,7 +25,7 @@ namespace MMLGB
             T_WAVEDUTY,
             T_PAN,
             T_PORTAMENTO,
-            T_SLIDE,
+            T_UNUSED,
             T_VIBRATO,
             T_VIBRATO_DELAY,
             T_REP_START,

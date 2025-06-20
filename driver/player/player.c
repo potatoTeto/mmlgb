@@ -13,7 +13,7 @@ UBYTE joystate, oldjoystate;
 
 UBYTE selection, paused;
 
-void togglePaused() {
+void togglePaused(void) {
 	paused = !paused;
 	mus_setPaused(paused);
 	if(paused) {
@@ -25,7 +25,7 @@ void togglePaused() {
 	}
 }
 
-void main() {
+void main(void) {
 	disable_interrupts();
 
 	DISPLAY_OFF;
