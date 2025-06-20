@@ -1,6 +1,8 @@
 mmlgb
 =====
 
+![screenshot](screenshot.png)
+
 A MML parser and GBDK sound driver for the Nintendo Game Boy.
 
 Please refer to the [MMLGB Wiki](https://github.com/potatoTeto/mmlgb/wiki) for additional information regarding usage.
